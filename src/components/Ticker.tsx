@@ -14,16 +14,20 @@ export function Ticker() {
     "Head Shaves",
   ];
 
+  const tickerItems = items.flatMap((item) => [
+    { key: `${item}-a`, label: item },
+    { key: `${item}-b`, label: item },
+  ]);
+
   return (
-    <div className="bg-[#c9a84c] overflow-hidden py-2 whitespace-nowrap">
-      <div className="inline-block animate-[ticker_18s_linear_infinite]">
-        {/* biome-ignore lint/suspicious/noArrayIndexKey: intentional duplication for infinite scroll */}
-        {[...items, ...items].map((item, index) => (
+    <div className="bg-gold overflow-hidden py-2 whitespace-nowrap">
+      <div className="inline-block animate-ticker">
+        {tickerItems.map((item) => (
           <span
-            key={`${item}-${index}`}
-            className="text-[11px] font-bold tracking-[3px] uppercase text-black mx-8"
+            key={item.key}
+            className="text-sm font-bold tracking-wider uppercase text-black mx-8"
           >
-            {item}
+            {item.label}
           </span>
         ))}
       </div>

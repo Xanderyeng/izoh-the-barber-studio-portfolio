@@ -38,32 +38,30 @@ export function Contact() {
     },
     {
       icon: MapPin,
-      label: "Leos Salon, Garden City Mall, Nairobi",
+      label: "Spritz Hair Studio, Runda Mall, Nairobi",
       href: "#",
     },
   ];
 
   return (
-    <div className="py-[90px] px-5 md:px-12 bg-[#080808]">
-      <div className="max-w-[1200px] mx-auto" id="contact">
-        <p className="text-[11px] tracking-[4px] text-[#c9a84c] uppercase mb-2">
-          Get In Touch
-        </p>
-        <h2 className="text-[clamp(26px,4vw,42px)] font-extrabold text-white mb-3">
+    <section className="py-22.5 px-5 md:px-12 bg-dark-darker">
+      <div className="max-w-300 mx-auto" id="contact">
+        <p className="section-label">Get In Touch</p>
+        <h2>
           Book a Session
           <br />
           or Enquire
         </h2>
-        <div className="w-[50px] h-[2px] bg-[#c9a84c] mb-9" />
+        <div className="section-divider" />
 
-        <div className="grid md:grid-cols-2 gap-[60px] items-start">
+        <div className="grid md:grid-cols-2 gap-15 items-start">
           {/* Contact Info */}
           <div>
-            <p className="text-[#888] leading-[1.8] mb-5 text-sm">
+            <p className="mb-5">
               Whether you want to book a session, discuss a collaboration, or
               you&apos;re an employer looking to connect — I&apos;d love to hear
-              from you. Currently based at Leos Salon, Garden City, Nairobi and
-              open to opportunities in Cairns, Australia.
+              from you. Currently based at Spritz Hair Studio, Runda Mall,
+              Nairobi and open to opportunities.
             </p>
 
             <div className="space-y-3">
@@ -79,9 +77,9 @@ export function Contact() {
                         ? "noopener noreferrer"
                         : undefined
                     }
-                    className="flex items-center gap-3 text-[#888] no-underline text-sm transition-colors hover:text-[#c9a84c] group"
+                    className="flex items-center gap-3 text-muted no-underline text-sm transition-colors hover:text-gold group"
                   >
-                    <div className="w-9 h-9 border border-[#2a2a2a] rounded-sm flex items-center justify-center text-[17px] transition-colors group-hover:border-[#c9a84c] shrink-0">
+                    <div className="w-9 h-9 border border-border rounded-sm flex items-center justify-center transition-colors group-hover:border-gold shrink-0">
                       <Icon className="w-4 h-4" />
                     </div>
                     {link.label}
@@ -127,18 +125,18 @@ export function Contact() {
                 setFormData({ ...formData, message: e.target.value })
               }
               required
-              className="min-h-[110px]"
+              className="min-h-27.5"
             />
             <Button
               type="submit"
               variant="gold"
-              className="text-xs tracking-[2px] uppercase"
+              className="text-sm tracking-wide uppercase"
             >
               Send Message
             </Button>
           </form>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

@@ -7,15 +7,11 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="h-screen flex items-center justify-center text-center relative overflow-hidden"
-      style={{
-        background:
-          "radial-gradient(ellipse at 50% 60%, #1a1200 0%, #080808 70%)",
-      }}
+      className="h-screen flex items-center justify-center text-center relative overflow-hidden hero-gradient"
     >
       {/* Background Text */}
       <div
-        className="absolute text-[clamp(80px,18vw,220px)] font-black text-[#c9a84c]/[0.04] tracking-[20px] select-none top-1/2 -translate-y-1/2"
+        className="absolute text-[clamp(80px,15vw,200px)] font-black text-gold/4 tracking-[0.15em] select-none top-1/2 -translate-y-1/2"
         aria-hidden="true"
       >
         IZOH
@@ -23,44 +19,44 @@ export function Hero() {
 
       {/* Content */}
       <div className="relative z-10 px-5">
-        <p className="text-xs tracking-[4px] text-[#c9a84c] uppercase mb-5">
+        <p className="text-xs tracking-widest text-gold uppercase mb-5">
           Senior Stylist &amp; Barber &nbsp;·&nbsp; All Hair Textures
-          &nbsp;·&nbsp; Nairobi, Kenya
+          {/* &nbsp;·&nbsp; Nairobi, Kenya */}
         </p>
 
-        <h1 className="text-[clamp(52px,10vw,110px)] font-black tracking-[6px] leading-none text-white">
+        <h1>
           ISAAC
           <br />
-          <span className="text-[#c9a84c]">MAYIAKA</span>
+          <span className="text-gold">MAYIAKA</span>
         </h1>
 
-        <p className="text-[clamp(13px,1.8vw,17px)] text-[#888] mt-3 tracking-[3px] uppercase">
+        <p className="text-base text-muted mt-3 tracking-wider uppercase">
           @izohthebarber
         </p>
 
-        <p className="text-[13px] text-[#c9a84c]/70 mt-2 italic tracking-wide">
+        <p className="text-sm text-gold-muted mt-2 italic tracking-tight">
           &ldquo;100% hard work. Never settling for less.&rdquo;
         </p>
 
         {/* Stats */}
         <div className="flex gap-10 mt-11 justify-center flex-wrap">
           <div className="text-center">
-            <div className="text-[34px] font-extrabold text-[#c9a84c]">13</div>
-            <div className="text-[10px] text-[#888] tracking-[2px] uppercase mt-1">
+            <div className="text-5xl font-extrabold text-gold">13</div>
+            <span className="text-[10px] text-muted tracking-wide uppercase mt-1 block">
               Years Experience
-            </div>
+            </span>
           </div>
           <div className="text-center">
-            <div className="text-[34px] font-extrabold text-[#c9a84c]">4+</div>
-            <div className="text-[10px] text-[#888] tracking-[2px] uppercase mt-1">
+            <div className="text-5xl font-extrabold text-gold">4</div>
+            <span className="text-[10px] text-muted tracking-wide uppercase mt-1 block">
               Hair Textures
-            </div>
+            </span>
           </div>
           <div className="text-center">
-            <div className="text-[34px] font-extrabold text-[#c9a84c]">1</div>
-            <div className="text-[10px] text-[#888] tracking-[2px] uppercase mt-1">
+            <div className="text-5xl font-extrabold text-gold">1</div>
+            <span className="text-[10px] text-muted tracking-wide uppercase mt-1 block">
               Standard: Excellence
-            </div>
+            </span>
           </div>
         </div>
 
@@ -69,14 +65,14 @@ export function Hero() {
           <Button
             asChild
             variant="gold"
-            className="px-8 text-xs tracking-[2px] uppercase"
+            className="px-8 text-xs tracking-wide uppercase"
           >
             <Link href="#gallery">View My Work</Link>
           </Button>
           <Button
             asChild
             variant="outline"
-            className="px-8 text-xs tracking-[2px] uppercase"
+            className="px-8 text-xs tracking-wide uppercase"
           >
             <Link href="#contact">Book / Enquire</Link>
           </Button>
